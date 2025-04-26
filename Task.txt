@@ -1,0 +1,15 @@
+Opened: Tuesday, 15 April 2025, 12:00 AM
+Due: Sunday, 27 April 2025, 12:00 AM
+Apologies, previous submission link was not working due to technical error, so I had to create the new submission link. Only one person from each group submit.
+Assessment - Week 12
+Please find your name in the spreadsheet.
+If you do not find your name/ group, please let me know immediately.
+A group can have 4-5 members. If you don't find your group at the end, I will assign you to a group. Submission should include:
+1.	A PDF [No page restrictions] including the project description (both for Mobile & Web app), code-blocks screenshots (for Mobile and web App), User Interface (UI) inputs & output screenshots (For Mobile App), HTML code screenshots and corresponding output screenshots (explain part of the the code). [Most important]
+2.	A power point PPT file [10-15 slides] including the project description (both for Mobile & Web app), code-blocks screenshots (for Mobile and web App), User Interface (UI) inputs & output screenshots (For Mobile App), HTML code screenshots and corresponding output screenshots (explain part of the the code). [Most important]
+3.	A ZIP file with the source code. For mobile app development, the Kotlin Code in Android Studio. For Web app development, the webpage (project.html) file. If you use complex systems other than .html, please use a readme.txt file to explain how to run your code. Submit the PDF and the source code separately. You may also upload the source code to github and put a link in the PDF file.
+Marking: Project Mark=20 [out of overall course mark]
+PDF File (60%), PPT file (20%), Source Code (20%)
+Project criteria (Android App/ Web Development Project): [Either Mobile App/Web development project]
+1.	Android App Project: Develop an android app using Android Studio that creates an UI and takes user input to show some output (for example: Scientific Calculator, Tax Calculator etc.). The app should include (but you may add mode if you want): (a) Add user input pressing a button (b) Produces some outputs (for example a digital calculator)
+2.	Web Development Project: Develop a web project that uses HTML and CSS (and any other extensions like Python/ JavaScript) and creates an organisational website/ portfolio. For example: online portfolio of SydneyMet, your online portfolio, or your organisational website. You should include (but not limited to): (a) Using different styles (colour, fonts) (b) Using different types of media (image, audio, video, YouTube link, external link etc.). If all the group members create separate webpage, please combine in a single HTML webpage, explain separately each part in the SINGLE PDF file that you are going to submit.

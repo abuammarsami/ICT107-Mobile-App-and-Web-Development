@@ -1,0 +1,81 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // Function to check if we are in mobile view
+    function isMobileView() {
+        return window.innerWidth <= 768; // Adjust width as needed
+    }  
+
+    // Select all menu items
+    const menuItems = document.querySelectorAll('.mega-mobile-menu.mega-menu-item');
+
+    // Add a "Back" button to reset the menu
+    const backButton = document.createElement('li');
+    backButton.className = 'menu-back mega-mobile-menu mega-menu-item';
+    backButton.innerHTML = '<a class="mega-menu-link" href="#"><span class="back-arrow">&lt;</span> Back</a>';  
+    backButton.style.display = 'none';
+
+    backButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (isMobileView()) {
+            // Show all menu headers and hide submenus
+            menuItems.forEach(menuItem => {
+                menuItem.style.display = 'block';
+                menuItem.classList.remove('active');
+                const submenu = menuItem.querySelector('.mega-sub-menu');
+                if (submenu) {
+                    submenu.style.display = 'none';
+                }
+            });
+            backButton.style.display = 'none'; // Hide "Back" button
+        }
+    });
+
+    // Append the "Back" button to the top of the menu
+    const menu = document.querySelector('.mega-mobile-menu');
+    if (menu) {
+        menu.parentNode.insertBefore(backButton, menu);
+    }
+
+    menuItems.forEach(item => {
+        const arrow = item.querySelector('a .mega-indicator'); // Target the span with class "mega-indicator"
+        const header = item.querySelector('a'); // Target the entire <a> tag
+
+        if (arrow) {
+            arrow.addEventListener('click', function (e) {
+                if (isMobileView()) {
+                    e.preventDefault(); // Prevent default behavior for the arrow click
+
+                    // Hide all menu headers and submenus
+                    menuItems.forEach(menuItem => {
+                        menuItem.style.display = 'none';
+                        menuItem.classList.remove('active');
+                        const submenu = menuItem.querySelector('.mega-sub-menu');
+                        if (submenu) {
+                            submenu.style.display = 'none';
+                        }
+                    });
+
+                    // Show only the clicked menu header and its submenu
+                    item.style.display = 'block';
+                    item.classList.add('active');
+
+                    const submenu = item.querySelector('.mega-sub-menu');
+                    if (submenu) {
+                        submenu.style.display = 'block';
+                    }
+
+                    // Show the "Back" button
+                    backButton.style.display = 'block';
+                }
+            });
+        }
+
+        if (header) {
+            header.addEventListener('click', function (e) {
+                if (isMobileView() && !e.target.classList.contains('mega-indicator')) {
+                    // Allow navigation when clicking the header text
+                    return; // Let the default action proceed
+                }
+            });
+        }
+    });
+});
